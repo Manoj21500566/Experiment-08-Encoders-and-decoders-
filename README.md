@@ -55,42 +55,91 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+Step-1:
+create module encoder and decoder.
+
+Step-2:
+Get inputs and outputs for encoders and decoders.
+
+Step-3:
+perform or operation for encoder and and logic for decoders.
+
+Step-4:
+perform RTL LOGIC and get waveform.
+
+Step-5:
+End the module.
 
 
 
 ### PROGRAM 
-/*
+
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+
+Developed by:Manoj M
+
+RegisterNumber: 212221240027 
+
+
+### ENCODER:
+~~~
+module EX7(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+output a,b,c;
+input d0,d1,d2,d3,d4,d5,d6,d7;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+~~~
+### DECODER:
+~~~
+module EX7(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+~~~
+### RTL LOGIC :
+### ENCODER:
+
+![1](https://user-images.githubusercontent.com/94588708/201336069-07b6648a-ba58-4155-b8bf-dbee050eaea1.png)
+
+### DECODER:
+
+![2](https://user-images.githubusercontent.com/94588708/201336098-ce22e473-cc21-4f3c-9e21-5222f80476f7.png)
+
+### TIMING DIGRAMS:
+### ENCODER:
+![3](https://user-images.githubusercontent.com/94588708/201335921-4050900e-3033-4b89-b6bb-808de905329c.png)
+
+### DECODER:
+
+![4](https://user-images.githubusercontent.com/94588708/201335958-9b4b172f-a3b3-4d1e-84df-26905c4d0105.png)
+
+### TRUTH TABLE :
+### ENCODER:
+
+![5](https://user-images.githubusercontent.com/94588708/201335836-ef2a929b-a175-4a19-8243-258d119a7975.png)
+
+### DE ENCODER:
+
+![6](https://user-images.githubusercontent.com/94588708/201335849-4716f16f-6004-47a6-ab63-61acd035be18.png)
+
+### RESULTS :
+Thus the program to desing encoder and decoder is completed.
 
 
 
 
 
 
-### RTL LOGIC  
 
 
 
-
-
-
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
